@@ -5,10 +5,10 @@ set CURL_CMD=C:\Windows\System32\curl.exe -kL
 set PYTHON_CMD=python
 set PYTHONUTF8=1
 
-@REM set EASY_PYTHON_VERSION=3.10.6
-@REM 3.10.6, 3.12.9
+@REM set EASY_PYTHON_VERSION=3.10.11
+@REM 3.10.11, 3.12.10
 if not exist "%~dp0Python_DefaultVersion.txt" (
-	echo 3.10.6> "%~dp0Python_DefaultVersion.txt"
+	echo 3.10.11> "%~dp0Python_DefaultVersion.txt"
 )
 
 if "%EASY_PYTHON_VERSION%" == "" (
