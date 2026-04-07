@@ -4,6 +4,10 @@ pushd %~dp0
 set EASY_TOOLS=%~dp0..
 set GITHUB_CLONE_OR_PULL=%EASY_TOOLS%\Git\GitHub_CloneOrPull.bat
 
+echo "ビルドエラー等によりこのバッチでインストール出来なかった場合は"
+echo "公式から*_x64-setup-pyinstaller.exeまたは*_x64-setup.exeをダウンロードしてインストールしてください"
+echo "https://github.com/zanllp/infinite-image-browsing/releases"
+
 @REM https://github.com/zanllp/sd-webui-infinite-image-browsing
 call "%GITHUB_CLONE_OR_PULL%" zanllp sd-webui-infinite-image-browsing main
 if %ERRORLEVEL% neq 0 ( popd & exit /b 1 )
