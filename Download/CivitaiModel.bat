@@ -7,7 +7,7 @@ set DOWNLOAD_FILE=%~2
 set MODEL_ID=%~3
 set VERSION_ID=%~4
 
-set "MODEL_URL=https://civitai.red/models/%MODEL_ID%?modelVersionId=%VERSION_ID%"
+set "MODEL_URL=https://civitai.com/models/%MODEL_ID%?modelVersionId=%VERSION_ID%"
 echo %MODEL_URL% %DOWNLOAD_FILE%
 
 @REM if "%CIVITAI_API_KEY%"=="" ( 内だと setlocal enabledelayedexpansion が必要
@@ -22,6 +22,6 @@ if "%CIVITAI_API_KEY%"=="" (
 	exit /b 1
 )
 
-set "DOWNLOAD_URL=https://civitai.red/api/download/models/%VERSION_ID%?token=%CIVITAI_API_KEY%"
+set "DOWNLOAD_URL=https://civitai.com/api/download/models/%VERSION_ID%?token=%CIVITAI_API_KEY%"
 call "%~dp0Aria.bat" "%DOWNLOAD_DIR%" "%DOWNLOAD_FILE%" "%DOWNLOAD_URL%"
 if %ERRORLEVEL% neq 0 ( exit /b 1 )
