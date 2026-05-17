@@ -37,6 +37,6 @@ if exist %GIT_CLONE_OR_PULL_DIR%\ (
 	endlocal
 )
 
-echo git clone %GIT_CLONE_OR_PULL_URL% %GIT_CLONE_OR_PULL_DIR%
-git clone %GIT_CLONE_OR_PULL_URL% %GIT_CLONE_OR_PULL_DIR%
+echo git clone %GIT_CLONE_OR_PULL_URL% .\%GIT_CLONE_OR_PULL_DIR%
+git clone %GIT_CLONE_OR_PULL_URL% .\%GIT_CLONE_OR_PULL_DIR%
 if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
