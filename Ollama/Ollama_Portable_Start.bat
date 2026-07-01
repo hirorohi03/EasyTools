@@ -9,7 +9,7 @@ if not exist "%~dp0env\" (
 )
 if exist "%~dp0env\ollama.exe" ( goto :EASY_OLLAMA_FOUND )
 
-set EASY_OLLAMA_URL=https://github.com/ollama/ollama/releases/download/v0.24.0/ollama-windows-amd64.zip
+set EASY_OLLAMA_URL=https://github.com/ollama/ollama/releases/download/v0.31.1/ollama-windows-amd64.zip
 echo %CURL_CMD% -o "%~dp0env\ollama.zip" %EASY_OLLAMA_URL%
 %CURL_CMD% -o "%~dp0env\ollama.zip" %EASY_OLLAMA_URL%
 if %ERRORLEVEL% neq 0 ( pause & exit /b 1 )
