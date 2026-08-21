@@ -1,4 +1,5 @@
-﻿/ComfyUi/ComfyUi_Version.txt
+﻿/Civitai/CivitaiApiKey.txt
+/ComfyUi/ComfyUi_Version.txt
 /ComfyUi/ComfyUiManager_Version.txt
 /ComfyUi/ComfyUiVersionControl-Disabled.txt
 /ComfyUi/PytorchVersionControl-Disabled.txt
@@ -10,12 +11,11 @@
 /Download/env/
 /Download/ARIA_USE_CURL
 /Download/Aria_MaxConnection.txt
-/Civitai/CivitaiApiKey.txt
 /EasyTools/
 /Ffmpeg/env/
 /Ffmpeg/*.mp4
-/Ffmpeg/*.webp
 /Ffmpeg/*.wav
+/Ffmpeg/*.webp
 /GenImageViewer/GenImageViewer/
 /Git/env/
 /InfiniteImageBrowsing/sd-webui-infinite-image-browsing/
@@ -23,7 +23,9 @@
 /LlamaCpp/LlamaCpp/
 /LlamaCpp/LlamaCpp_Version.txt
 /Mosaic/*/
+/Ollama/env/
 /Python/env/
 /Python/venv/
 /Python/Python_DefaultVersion.txt
 /SdImageDiet/SdImageDiet/
+/Uv/env/
