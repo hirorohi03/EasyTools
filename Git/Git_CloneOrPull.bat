@@ -27,7 +27,15 @@ if exist %GIT_CLONE_OR_PULL_DIR%\ (
 
 		echo git -C %GIT_CLONE_OR_PULL_DIR% pull
 		git -C %GIT_CLONE_OR_PULL_DIR% pull
-		if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
+		if !ERRORLEVEL! neq 0 (
+			echo git -C %GIT_CLONE_OR_PULL_DIR% fetch --force origin
+			git -C %GIT_CLONE_OR_PULL_DIR% fetch --force origin
+			if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
+
+			echo git -C %GIT_CLONE_OR_PULL_DIR% reset --hard origin/!BRANCH_NAME!
+			git -C %GIT_CLONE_OR_PULL_DIR% reset --hard origin/!BRANCH_NAME!
+			if !ERRORLEVEL! neq 0 ( pause & endlocal & exit /b 1 )
+		)
 		endlocal & exit /b 0
 	) else (
 		echo rmdir /S /Q %GIT_CLONE_OR_PULL_DIR%
